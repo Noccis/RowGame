@@ -19,7 +19,7 @@ class RowGame {
         if boardArray[row] == 0 {
             
             boardArray[row] = player
-            isGameOver()
+            
             return true
             
         }else{
@@ -27,12 +27,14 @@ class RowGame {
         }
     }
     
-    func isGameOver() {
-        for row in...boardArray.count {
-            if row != 0 {
-                isGameOver = true
+    func isGameOver()-> Bool {
+        for spot in boardArray{
+            if spot == 0 {
+                return false
             }
         }
+        isThereAWinner()
+        return true
         
     }
     

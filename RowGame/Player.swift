@@ -7,13 +7,14 @@
 
 import Foundation
 
-class Player (playerID: Int, playerName: String) {
+class Player  {
     
     let playerID: Int
     let playerName: String
     
-    init {
-    
+    init(playerID: Int, playerName: String = "Default") {
+        self.playerID = playerID
+        self.playerName = playerName
         
     }
     

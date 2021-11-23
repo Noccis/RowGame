@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // Varje gång någon clickar på en ruta behöver game.isGameOver köras.
        
         
         
