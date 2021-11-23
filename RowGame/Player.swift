@@ -11,10 +11,12 @@ class Player  {
     
     let playerID: Int
     let playerName: String
-    
-    init(playerID: Int, playerName: String = "Default") {
+    let playerImage: String
+    init(playerID: Int, playerName: String = "Default", playerImage:String) {
+        
         self.playerID = playerID
         self.playerName = playerName
+        self.playerImage = playerImage
         
     }
     

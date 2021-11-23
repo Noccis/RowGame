@@ -11,7 +11,6 @@ class RowGame {
     
     var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
-    // Do I need to initiate this when creating object?
     
     
     func placeMarker(row: Int, player: Int)-> Bool {

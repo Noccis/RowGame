@@ -9,14 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var isGameOver = false
-    var playerActive = true
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Varje gång någon clickar på en ruta behöver game.isGameOver köras.
+    
        
         
         
