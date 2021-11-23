@@ -16,6 +16,8 @@
 		0F3B4A5E274D13AE00BE5493 /* RowGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A5D274D13AE00BE5493 /* RowGameTests.swift */; };
 		0F3B4A68274D13AE00BE5493 /* RowGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A67274D13AE00BE5493 /* RowGameUITests.swift */; };
 		0F3B4A6A274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A69274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift */; };
+		0F3B4A77274D247A00BE5493 /* RowGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A76274D247A00BE5493 /* RowGame.swift */; };
+		0F3B4A79274D275F00BE5493 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A78274D275F00BE5493 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0F3B4A63274D13AE00BE5493 /* RowGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3B4A67274D13AE00BE5493 /* RowGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowGameUITests.swift; sourceTree = "<group>"; };
 		0F3B4A69274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F3B4A76274D247A00BE5493 /* RowGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowGame.swift; sourceTree = "<group>"; };
+		0F3B4A78274D275F00BE5493 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				0F3B4A46274D13A300BE5493 /* AppDelegate.swift */,
 				0F3B4A48274D13A300BE5493 /* SceneDelegate.swift */,
 				0F3B4A4A274D13A300BE5493 /* ViewController.swift */,
+				0F3B4A78274D275F00BE5493 /* Player.swift */,
+				0F3B4A76274D247A00BE5493 /* RowGame.swift */,
 				0F3B4A4C274D13A300BE5493 /* Main.storyboard */,
 				0F3B4A4F274D13AD00BE5493 /* Assets.xcassets */,
 				0F3B4A51274D13AD00BE5493 /* LaunchScreen.storyboard */,
@@ -260,6 +266,8 @@
 			files = (
 				0F3B4A4B274D13A300BE5493 /* ViewController.swift in Sources */,
 				0F3B4A47274D13A300BE5493 /* AppDelegate.swift in Sources */,
+				0F3B4A77274D247A00BE5493 /* RowGame.swift in Sources */,
+				0F3B4A79274D275F00BE5493 /* Player.swift in Sources */,
 				0F3B4A49274D13A300BE5493 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
