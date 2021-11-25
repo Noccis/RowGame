@@ -21,6 +21,10 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var imageZero: UIImageView!
     
+    @IBOutlet weak var imageOne: UIImageView!
+    
+    
+    
     
     
     @IBAction func tapZero(_ sender: UITapGestureRecognizer) {
@@ -32,8 +36,17 @@ class GameViewController: UIViewController {
         }else{
             print("Invalid move!")
         }
+    }
+    
+    @IBAction func tapOne(_ sender: UITapGestureRecognizer) {
         
-
+        let arrayNr = 1
+        if gameBoard.boardArray[arrayNr] == 0 {
+            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageOne)
+          
+        }else{
+            print("Invalid move!")
+        }
     }
     
     

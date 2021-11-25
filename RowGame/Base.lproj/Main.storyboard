@@ -62,8 +62,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-RT-V4D">
                                 <rect key="frame" x="281" y="371" width="100" height="100"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-pK-qzp">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-pK-qzp">
                                 <rect key="frame" x="157" y="231" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wli-57-tdC" appends="YES" id="OHt-tz-gwI"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-TE-n4U">
                                 <rect key="frame" x="157" y="511" width="100" height="100"/>
@@ -110,13 +114,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mm3-aP-bSD"/>
                     <connections>
+                        <outlet property="imageOne" destination="OJI-pK-qzp" id="pui-EB-LKe"/>
                         <outlet property="imageZero" destination="Isc-fr-HbN" id="AuQ-AM-wiL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttX-Z0-kQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VQI-a5-x6w">
+                <tapGestureRecognizer id="VQI-a5-x6w" userLabel="Zero Tap Gesture Recognizer">
                     <connections>
                         <action selector="tapZero:" destination="dcq-BU-94C" id="gxM-jp-8ag"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wli-57-tdC" userLabel="One Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tapOne:" destination="dcq-BU-94C" id="Bsr-3b-giM"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
