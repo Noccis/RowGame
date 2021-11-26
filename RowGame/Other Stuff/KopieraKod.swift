@@ -14,4 +14,8 @@
  // Skapa 2 spelare
  let player1 = Player(playerID: 1, playerImage: "xgreen")
  let player2 = Player(playerID: 2, playerImage: "cirkle")
+ 
+ let destinationVC = segue.destination as? NewJournalEntryViewController
+ destinationVC?.journalVC = self
+ destinationVC?.journal = journal
  */

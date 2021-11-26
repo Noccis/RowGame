@@ -9,48 +9,61 @@ import Foundation
 
 class RowGame {
     
-    var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+   private var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+ 
     
     
+    func isSpotOpen(arrayNr: Int, playerActive: Int) -> Bool {
+        if boardArray[arrayNr] == 0 {
+            print("isSpotOpen spot is OPEN")
+            setPlayerMark(arrayNr: arrayNr, playerNr: playerActive)
+            return true
+        }else{
+            print("Invalid move!")
+            return false
+        }
+    }
     
-    func setPlayerMark(arrayNr: Int, controler: ViewController, imageOutlet: UIImageView) {
-        if playerActive == true {
-            // Player one active
-            gameBoard.boardArray[arrayNr] = 1
-            imageOutlet.image = UIImage(named: "xgreen")
-            playerActive.toggle()
-            isGameOver = gameBoard.isGameOver()
+    func setPlayerMark(arrayNr: Int, playerNr: Int) {
+        print("setPlayerMark running!")
+    boardArray[arrayNr] = playerNr
+        isThereAWinner(player: playerNr)
+        if isGameOver() == true {
             
-            print("Set player mark func running, P1. Number \(gameBoard.boardArray[arrayNr]) set to mark")
-            print(gameBoard.boardArray)
+            print("setPlayerMark, isGameOver == true")
             
-        }else {
-            // Player two active
-            gameBoard.boardArray[arrayNr] = 2
-            imageOutlet.image = UIImage(named: "cirkle")
-            playerActive.toggle()
-            isGameOver = gameBoard.isGameOver()
-            
-            print("Set player mark func running, P2 Number \(gameBoard.boardArray[arrayNr]) set to mark")
-            print(gameBoard.boardArray)
         }
         
     }
+ 
     
     func isGameOver()-> Bool {
+        print("isGameOver running!")
         for spot in boardArray{
             if spot == 0 {
                 return false
             }
         }
-        isThereAWinner()
         return true
         
     }
     
     
-    func isThereAWinner() {
-        
+    func isThereAWinner(player: Int) {
+        print("isThereAWinner running!")
+        if boardArray[0] == player && boardArray[1] == player && boardArray[2] == player,
+           boardArray[3] == player && boardArray[4] == player && boardArray[5] == player,
+           boardArray[6] == player && boardArray[7] == player && boardArray[8] == player,
+           boardArray[0] == player && boardArray[3] == player && boardArray[6] == player,
+           boardArray[1] == player && boardArray[4] == player && boardArray[7] == player,
+           boardArray[2] == player && boardArray[5] == player && boardArray[8] == player,
+           boardArray[0] == player && boardArray[4] == player && boardArray[8] == player,
+           boardArray[6] == player && boardArray[4] == player && boardArray[2] == player
+        {
+            print("Player\(player) won!")
+        }else{
+            print("isThereAWinner = NO WINNER!")
+        }
         
     }
     

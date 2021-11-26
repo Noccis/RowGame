@@ -45,100 +45,178 @@ class GameViewController: UIViewController {
     @IBAction func tapZero(_ sender: UITapGestureRecognizer) {
         
         let arrayNr = 0
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageZero)
-          
+        let playerInt: Int?
         
-        }else{
-            print("Invalid move!")
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageZero, playerInt: playerInt)
+            
+        }
+        
     }
     
     @IBAction func tapOne(_ sender: UITapGestureRecognizer) {
         
         let arrayNr = 1
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageOne)
-            
+        let playerInt: Int?
         
-        }else{
-            print("Invalid move!")
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
+        }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageOne, playerInt: playerInt)
+            
         }
     }
     
     
     @IBAction func tapTwo(_ sender: UITapGestureRecognizer) {
         let arrayNr = 2
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageTwo)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageTwo, playerInt: playerInt)
+            
+        }
+       
     }
     
     
     @IBAction func tapThree(_ sender: UITapGestureRecognizer) {
         let arrayNr = 3
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageThree)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageThree, playerInt: playerInt)
+            
+        }
+      
     }
     
     @IBAction func tapFour(_ sender: UITapGestureRecognizer) {
         let arrayNr = 4
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageFour)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageFour, playerInt: playerInt)
+            
+        }
+       
     }
     
     
     @IBAction func tapFive(_ sender: UITapGestureRecognizer) {
         let arrayNr = 5
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageFive)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageFive, playerInt: playerInt)
+            
+        }
+       
     }
     
     
     @IBAction func tapSix(_ sender: UITapGestureRecognizer) {
         let arrayNr = 6
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageSix)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageSix, playerInt: playerInt)
+            
+        }
+     
     }
     
     @IBAction func tapSeven(_ sender: UITapGestureRecognizer) {
         let arrayNr = 7
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageSeven)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageSeven, playerInt: playerInt)
+            
+        }
+       
     }
     
     
     @IBAction func tapEight(_ sender: UITapGestureRecognizer) {
         let arrayNr = 8
-        if gameBoard.boardArray[arrayNr] == 0 {
-            setPlayerMark(arrayNr: arrayNr, imageOutlet: imageEight)
-          
-        }else{
-            print("Invalid move!")
+        let playerInt: Int?
+        
+        if playerActive == true {
+            playerInt = 1
+        }else {
+            playerInt = 2
         }
+        guard let playerInt = playerInt else {
+            return
+        }
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+            setPlayerImage(imageOutlet: imageEight, playerInt: playerInt)
+            
+        }
+        
     }
     
     
@@ -150,14 +228,27 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-            
     }
     
+    
+    func setPlayerImage(imageOutlet: UIImageView, playerInt: Int) {
+        if playerInt == 1 {
+            
+            imageOutlet.image = UIImage(named: "xgreen")
+            playerActive.toggle()
+        }else if playerInt == 2{
+            imageOutlet.image = UIImage(named: "cirkle")
+            playerActive.toggle()
+        }else {
+            print("setPLayerImage ERROR")
+        }
+        
+    }
+    /*
     func setPlayerMark(arrayNr: Int, imageOutlet: UIImageView) {
         if playerActive == true {
             // Player one active
-            gameBoard.boardArray[arrayNr] = 1
+            gameBoard.boardArray[arrayNr] = 1 // Gör i rowgame
             imageOutlet.image = UIImage(named: "xgreen")
             playerActive.toggle()
             isGameOver = gameBoard.isGameOver()
@@ -177,6 +268,7 @@ class GameViewController: UIViewController {
         }
         
     }
+    */
 
     /*
     // MARK: - Navigation
