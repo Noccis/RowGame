@@ -13,17 +13,28 @@ class RowGame {
     
     
     
-    func placeMarker(row: Int, player: Int)-> Bool {
-        
-        if boardArray[row] == 0 {
+    func setPlayerMark(arrayNr: Int, controler: ViewController, imageOutlet: UIImageView) {
+        if playerActive == true {
+            // Player one active
+            gameBoard.boardArray[arrayNr] = 1
+            imageOutlet.image = UIImage(named: "xgreen")
+            playerActive.toggle()
+            isGameOver = gameBoard.isGameOver()
             
-            boardArray[row] = player
+            print("Set player mark func running, P1. Number \(gameBoard.boardArray[arrayNr]) set to mark")
+            print(gameBoard.boardArray)
             
-            return true
+        }else {
+            // Player two active
+            gameBoard.boardArray[arrayNr] = 2
+            imageOutlet.image = UIImage(named: "cirkle")
+            playerActive.toggle()
+            isGameOver = gameBoard.isGameOver()
             
-        }else{
-            return false
+            print("Set player mark func running, P2 Number \(gameBoard.boardArray[arrayNr]) set to mark")
+            print(gameBoard.boardArray)
         }
+        
     }
     
     func isGameOver()-> Bool {
@@ -36,6 +47,7 @@ class RowGame {
         return true
         
     }
+    
     
     func isThereAWinner() {
         

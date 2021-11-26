@@ -48,6 +48,7 @@ class GameViewController: UIViewController {
         if gameBoard.boardArray[arrayNr] == 0 {
             setPlayerMark(arrayNr: arrayNr, imageOutlet: imageZero)
           
+        
         }else{
             print("Invalid move!")
         }
@@ -58,7 +59,8 @@ class GameViewController: UIViewController {
         let arrayNr = 1
         if gameBoard.boardArray[arrayNr] == 0 {
             setPlayerMark(arrayNr: arrayNr, imageOutlet: imageOne)
-          
+            
+        
         }else{
             print("Invalid move!")
         }
@@ -158,6 +160,8 @@ class GameViewController: UIViewController {
             gameBoard.boardArray[arrayNr] = 1
             imageOutlet.image = UIImage(named: "xgreen")
             playerActive.toggle()
+            isGameOver = gameBoard.isGameOver()
+            
             print("Set player mark func running, P1. Number \(gameBoard.boardArray[arrayNr]) set to mark")
             print(gameBoard.boardArray)
             
@@ -166,6 +170,8 @@ class GameViewController: UIViewController {
             gameBoard.boardArray[arrayNr] = 2
             imageOutlet.image = UIImage(named: "cirkle")
             playerActive.toggle()
+            isGameOver = gameBoard.isGameOver()
+            
             print("Set player mark func running, P2 Number \(gameBoard.boardArray[arrayNr]) set to mark")
             print(gameBoard.boardArray)
         }
