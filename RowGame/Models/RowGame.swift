@@ -9,11 +9,13 @@ import Foundation
 
 class RowGame {
     
-   private var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  // private
+    var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
  
     
     
     func isSpotOpen(arrayNr: Int, playerActive: Int) -> Bool {
+        print(boardArray)
         if boardArray[arrayNr] == 0 {
             print("isSpotOpen spot is OPEN")
             setPlayerIntInArray(arrayNr: arrayNr, playerNr: playerActive)
@@ -52,29 +54,7 @@ class RowGame {
     
     func isThereAWinner(player: Int) {
         print("isThereAWinner running!")
-       /*
-        let playerSum = player * 3
-        
-       if boardArray[0] + boardArray[1] + boardArray[2] == playerSum {
-           gameOver()
-       }else if boardArray[3] + boardArray[4] + boardArray[5] == playerSum{
-           gameOver()
-       }else if  boardArray[6] + boardArray[7] + boardArray[8] == playerSum {
-           gameOver()
-       }else if boardArray[0] + boardArray[3] + boardArray[6] == playerSum {
-           gameOver()
-       }else if boardArray[1] + boardArray[4] + boardArray[7] == playerSum {
-           gameOver()
-       }else if boardArray[2] + boardArray[5] + boardArray[8] == playerSum {
-           gameOver()
-       }else if boardArray[0] + boardArray[4] + boardArray[8] == playerSum {
-           gameOver()
-       }else if boardArray[6] + boardArray[4] + boardArray[2] == playerSum {
-           gameOver()
-       }else {
-           print("isThereAWinner ERROR")
-       }
-        */
+      
         if boardArray[0] == player && boardArray[1] == player && boardArray[2] == player {
             gameOver()
             
@@ -105,12 +85,30 @@ class RowGame {
     }
     
     func gameOver() {
+     /*
+        for spot in boardArray {
+            boardArray[spot] = 6 // Set till att inga fler drag kan göras.
+            print("\(spot) = \(boardArray[spot])!")
+        }
+      */
+        for (index, spot) in boardArray.enumerated() {
+            boardArray[index] = 10
+            print("\(index): '\(spot)'")
+        }
+        print(boardArray)
         print("GAME OVER")
+      
+
         // Hoppa till en annan sida.
     }
     
-    func resetGame() {
-        
+    func resetGame() -> Bool {
+        for spot in boardArray {
+            boardArray[spot] = 0
+        }
+        print("resetGame running. BoardArray:")
+        print(boardArray)
+        return true
         
     }
     

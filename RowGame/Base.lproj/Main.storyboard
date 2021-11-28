@@ -116,6 +116,12 @@
                                     <outletCollection property="gestureRecognizers" destination="gjF-Ju-saB" appends="YES" id="bnc-3X-T8C"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-Bc-qcB">
+                                <rect key="frame" x="33" y="30" width="348" height="81"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7S4-M6-qE7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,19 +135,23 @@
                             <constraint firstItem="AsZ-sR-71b" firstAttribute="leading" secondItem="ugb-Vt-wOE" secondAttribute="trailing" constant="24" id="9Sm-8z-x3r"/>
                             <constraint firstItem="UGL-A6-tXt" firstAttribute="top" secondItem="tGX-RT-V4D" secondAttribute="bottom" constant="40" id="HU5-Lg-3sA"/>
                             <constraint firstItem="AYh-oG-mH9" firstAttribute="leading" secondItem="OJI-pK-qzp" secondAttribute="trailing" constant="24" id="Kie-ne-MDQ"/>
+                            <constraint firstItem="mvK-Bc-qcB" firstAttribute="top" secondItem="7S4-M6-qE7" secondAttribute="top" constant="30" id="MlQ-Fg-FIk"/>
                             <constraint firstItem="g8c-TE-n4U" firstAttribute="top" secondItem="AsZ-sR-71b" secondAttribute="bottom" constant="40" id="S0i-ss-I6a"/>
+                            <constraint firstItem="mvK-Bc-qcB" firstAttribute="leading" secondItem="7S4-M6-qE7" secondAttribute="leading" constant="33" id="Tk9-rV-Y1g"/>
                             <constraint firstItem="ugb-Vt-wOE" firstAttribute="top" secondItem="Isc-fr-HbN" secondAttribute="bottom" constant="40" id="db4-TZ-XOX"/>
                             <constraint firstItem="OJI-pK-qzp" firstAttribute="leading" secondItem="Isc-fr-HbN" secondAttribute="trailing" constant="24" id="gKT-0S-elC"/>
                             <constraint firstItem="AsZ-sR-71b" firstAttribute="centerY" secondItem="Tyu-NE-hXh" secondAttribute="centerY" id="kan-Pc-zW8"/>
                             <constraint firstItem="AsZ-sR-71b" firstAttribute="top" secondItem="OJI-pK-qzp" secondAttribute="bottom" constant="40" id="oKo-c1-vZd"/>
                             <constraint firstItem="tGX-RT-V4D" firstAttribute="centerY" secondItem="Tyu-NE-hXh" secondAttribute="centerY" id="s1g-3G-jDU"/>
                             <constraint firstItem="OJI-pK-qzp" firstAttribute="centerX" secondItem="Tyu-NE-hXh" secondAttribute="centerX" id="shT-zS-hzA"/>
+                            <constraint firstItem="7S4-M6-qE7" firstAttribute="trailing" secondItem="mvK-Bc-qcB" secondAttribute="trailing" constant="33" id="xKE-gN-eD6"/>
                             <constraint firstItem="tGX-RT-V4D" firstAttribute="top" secondItem="AYh-oG-mH9" secondAttribute="bottom" constant="40" id="xoX-vW-ioh"/>
                             <constraint firstItem="ugb-Vt-wOE" firstAttribute="centerY" secondItem="Tyu-NE-hXh" secondAttribute="centerY" id="zzv-ck-j7i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mm3-aP-bSD"/>
                     <connections>
+                        <outlet property="gameTextLabel" destination="mvK-Bc-qcB" id="0hZ-Ae-unt"/>
                         <outlet property="imageEight" destination="UGL-A6-tXt" id="OVD-gv-99g"/>
                         <outlet property="imageFive" destination="tGX-RT-V4D" id="Eds-p4-FUs"/>
                         <outlet property="imageFour" destination="AsZ-sR-71b" id="Bpf-wn-4LD"/>

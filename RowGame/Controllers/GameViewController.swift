@@ -19,6 +19,10 @@ class GameViewController: UIViewController {
     let player1 = Player(playerID: 1, playerImage: "xgreen")
     let player2 = Player(playerID: 2, playerImage: "cirkle")
 
+    @IBOutlet weak var gameTextLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var imageZero: UIImageView!
     
     @IBOutlet weak var imageOne: UIImageView!
@@ -219,9 +223,18 @@ class GameViewController: UIViewController {
         
     }
     
+    // ----------------------------------------------------------------
+    // ----------------------------------------------------------------
+    // ----------------------------------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gameTextLabel.text = "Welcome \(player1.playerID) & \(player2.playerID)!"
+        
+       
+        
+        
 
     }
     
@@ -239,33 +252,11 @@ class GameViewController: UIViewController {
         }
         
     }
-    /*
-    func setPlayerMark(arrayNr: Int, imageOutlet: UIImageView) {
-        if playerActive == true {
-            // Player one active
-            gameBoard.boardArray[arrayNr] = 1 // Gör i rowgame
-            imageOutlet.image = UIImage(named: "xgreen")
-            playerActive.toggle()
-            isGameOver = gameBoard.isGameOver()
-            
-            print("Set player mark func running, P1. Number \(gameBoard.boardArray[arrayNr]) set to mark")
-            print(gameBoard.boardArray)
-            
-        }else {
-            // Player two active
-            gameBoard.boardArray[arrayNr] = 2
-            imageOutlet.image = UIImage(named: "cirkle")
-            playerActive.toggle()
-            isGameOver = gameBoard.isGameOver()
-            
-            print("Set player mark func running, P2 Number \(gameBoard.boardArray[arrayNr]) set to mark")
-            print(gameBoard.boardArray)
-        }
-        
+    
+    func imageReset() {
+        // reloada första aktiviteten?
     }
-    */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -273,6 +264,6 @@ class GameViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
