@@ -5,8 +5,10 @@
 //  Created by Toni Löf on 2021-11-25.
 // FRÅGOR TILL DAVID
 // Ska jag ha player image i klassen eller ska det inte vara del av modell?
+// Hur resettar jag bilderna i imageViews enklast när man resettar spelet?
 //
-//
+
+
 
 // Skapa ImageViews med bas bild                                (x)
 // Koppla dom till din Controller                               (x)
@@ -18,9 +20,13 @@
 // Fixa en TextView som dyker upp (toast?) vid invalid move     (-)
 // Skriv func för isGameOver                                    (x)
 // Skriv func för isThereAWinner                                (x)
-// Sätt labels i gameview som visar spelarnas namn              ()
+// Sätt labels i gameview som visar spelarnas namn              (x)
+// Lägg ut knapparnas kod i en funktion imageTapped             ()
+// Kalla på RowGame funktionerna i imageTapped istället för internt ()
+// Byt ut playerImage mot name i classen Player.                ()
 // Visa i label vem som vunnit eller om det är oavgjort         ()
 // Sätt en reset button                                         ()
+// Lägg alla images i en array så du kan resetta dom            ()
 // Fixa en funktion som lägger om alla image från början        ()
 // Fixa error ljud när man försöker lägga på tagen plats        ()
 // Skriv om setImage så den väljer player image?                ()

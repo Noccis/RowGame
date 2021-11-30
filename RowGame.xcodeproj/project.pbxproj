@@ -89,6 +89,7 @@
 		0F3B4A3A274D13A300BE5493 = {
 			isa = PBXGroup;
 			children = (
+				0F9B4197274FC4D30049337F /* Models */,
 				0F3B4A45274D13A300BE5493 /* RowGame */,
 				0F3B4A5C274D13AE00BE5493 /* RowGameTests */,
 				0F3B4A66274D13AE00BE5493 /* RowGameUITests */,
@@ -110,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				0F9B419A274FC8800049337F /* Other Stuff */,
-				0F9B4197274FC4D30049337F /* Models */,
 				0F9B4196274FC4CB0049337F /* Controllers */,
 				0F3B4A4C274D13A300BE5493 /* Main.storyboard */,
 				0F3B4A4F274D13AD00BE5493 /* Assets.xcassets */,
