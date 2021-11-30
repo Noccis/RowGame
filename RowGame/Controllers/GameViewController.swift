@@ -44,100 +44,23 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var imageEight: UIImageView!
     
+    var imageViewArray: [UIImageView?] = []
     
-    
-    
-    
-    
-    @IBAction func tapZero(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-    }
-    
-    @IBAction func tapOne(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-    }
-    
-    
-    @IBAction func tapTwo(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-       
-    }
-    
-    
-    @IBAction func tapThree(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-      
-    }
-    
-    @IBAction func tapFour(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-       
-    }
-    
-    
-    @IBAction func tapFive(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-    }
-    
-    
-    @IBAction func tapSix(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-    }
-    
-    @IBAction func tapSeven(_ sender: UITapGestureRecognizer) {
-        
-        let arrayNr = sender.view?.tag
-        guard let arrayNr = arrayNr else{
-            return
-        }
-        imageTapped(arrayNr: arrayNr)
-       
-    }
-    
-    
-    @IBAction func tapEight(_ sender: UITapGestureRecognizer) {
 
+    
+    
+    @IBAction func tapImage(_ sender: UITapGestureRecognizer) {
+        
         let arrayNr = sender.view?.tag
         guard let arrayNr = arrayNr else{
+            print("func TAPIMAGE, the sender tag is NIL")
             return
         }
         imageTapped(arrayNr: arrayNr)
+        print("func TAPIMAGE, sender tag: \(arrayNr)")
     }
+    
+   
     
     // ----------------------------------------------------------------
     // ----------------------------------------------------------------
@@ -150,6 +73,15 @@ class GameViewController: UIViewController {
         
         playerTurnInformationText()
         
+        imageViewArray.append(imageZero)
+        imageViewArray.append(imageOne)
+        imageViewArray.append(imageTwo)
+        imageViewArray.append(imageThree)
+        imageViewArray.append(imageFour)
+        imageViewArray.append(imageFive)
+        imageViewArray.append(imageSix)
+        imageViewArray.append(imageSeven)
+        imageViewArray.append(imageEight)
         
         
         
@@ -161,6 +93,7 @@ class GameViewController: UIViewController {
     }
     
     func imageTapped(arrayNr: Int) {
+        print(arrayNr)
         
         let playerInt: Int?
         
@@ -173,16 +106,20 @@ class GameViewController: UIViewController {
             return
         }
         if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
-            setPlayerImage(imageOutlet: imageZero, playerInt: playerInt)
-            
+            setPlayerImage(ImageViewTag: arrayNr, playerInt: playerInt)
+            // Gör om till spot i imageArray
         }
         
     }
     
     
-    func setPlayerImage(imageOutlet: UIImageView, playerInt: Int) {
+    func setPlayerImage(ImageViewTag: Int, playerInt: Int) {
+        
+        let imageOutlet = imageViewArray[ImageViewTag]
+        guard let imageOutlet = imageOutlet else { return }
+       
         if playerInt == 1 {
-            
+           
             imageOutlet.image = UIImage(named: "xgreen")
             playerActive.toggle()
             playerTurnInformationText()

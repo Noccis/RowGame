@@ -22,6 +22,7 @@
 // Skriv func för isThereAWinner                                (x)
 // Sätt labels i gameview som visar spelarnas namn              (x)
 // Lägg ut knapparnas kod i en funktion imageTapped             ()
+// Knyt att tap recong till en enda action                      ()
 // Kalla på RowGame funktionerna i imageTapped istället för internt ()
 // Byt ut playerImage mot name i classen Player.                ()
 // Visa i label vem som vunnit eller om det är oavgjort         ()
