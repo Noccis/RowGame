@@ -175,47 +175,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttX-Z0-kQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="VQI-a5-x6w" userLabel="Zero Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="0Sj-Wp-nUQ"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="2Y5-rc-qAL"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="wli-57-tdC" userLabel="One Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="Vkd-ZB-1b9"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="10y-9V-xGk"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="uX7-Tc-Ctx" userLabel="Two Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="nZU-Zw-6o6"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="aJK-gI-4RI"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jTv-E9-sE5" userLabel="Three Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="j7B-7u-rmY"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="c9D-NC-TkW"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="HkY-2G-rg1" userLabel="Four Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="VGJ-rD-osC"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="OXF-po-Omg"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="vdn-Kh-61h" userLabel="Five Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="4UB-h1-WGC"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="8fW-Tb-zS9"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="gjF-Ju-saB" userLabel="Six Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="xzq-ds-svi"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="yNm-EP-DWt"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="slR-aR-Pi0" userLabel="Seven Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="kxB-Z0-s3k"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="aXy-yJ-Li0"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="9fl-qX-sS1" userLabel="Eight Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImage:" destination="dcq-BU-94C" id="8a5-Wv-Nzq"/>
+                        <action selector="getUIImageViewTag:" destination="dcq-BU-94C" id="6if-Yv-gT9"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
