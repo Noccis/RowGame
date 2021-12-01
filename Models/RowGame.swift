@@ -108,21 +108,36 @@ class RowGame {
     }
     
     func gameOver() {
-        for (index, spot) in boardArray.enumerated() {
-            boardArray[index] = 10
-            print("\(index): '\(spot)'")
+       
+      var pos = -1
+        
+        for var number in boardArray {
+            pos += 1
+            number = 10
+            boardArray[pos] = number
+        
         }
+       
+     print(boardArray)
         print("GAME OVER")
         
     }
     
-    func resetGame() -> Bool {
-        for (index, spot) in boardArray.enumerated() {
-            boardArray[index] = 0
-        }
+    func resetGame(){
+        
+        var pos = -1
+          
+          for var number in boardArray {
+              pos += 1
+              number = 0
+              boardArray[pos] = number
+          
+          }
+        
         print("resetGame running. BoardArray:")
         print(boardArray)
-        return true
+       
+        
         
     }
     

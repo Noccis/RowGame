@@ -193,9 +193,19 @@ class GameViewController: UIViewController {
         
     }
     
-    func imageReset() {
-        // reloada första aktiviteten?
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+        gameBoard.resetGame()
+        isGameOver = false
+        playerActive = true
+        playerTurnInformationText()
+        
+        // Gå igenom array med imageViews och sätt tillbaka alla bilder till emptyFrame
+    
+    
     }
+    
+    
 
     // MARK: - Navigation
 

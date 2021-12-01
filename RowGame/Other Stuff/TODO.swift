@@ -23,14 +23,15 @@
 // Sätt labels i gameview som visar spelarnas namn              (x)
 // Lägg ut knapparnas kod i en funktion imageTapped             (x)
 // Knyt att tap recong till en enda action                      (x)
-// Kalla på RowGame funktionerna i imageTapped istället för internt ()
+// Kalla på RowGame funktionerna i imageTapped istället för internt (x)
 // Byt ut playerImage mot name i classen Player.                ()
-// Visa i label vem som vunnit eller om det är oavgjort         ()
-// Sätt en reset button                                         ()
+// Visa i label vem som vunnit eller om det är oavgjort         (x)
+// Sätt en reset button                                         (x)
 // Lägg alla images i en array så du kan resetta dom            (x)
 // Fixa en funktion som lägger om alla image från början        ()
 // Fixa error ljud när man försöker lägga på tagen plats        ()
 // Skriv om setImage så den väljer player image?                ()
+// Kolla om du använder bool isGameOver i gamecontrollern       ()
 // ----------------------------------------------------------
 // VG
 // Fixa så man kan lägga in namn                                ()
