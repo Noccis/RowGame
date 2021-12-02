@@ -9,7 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var isGameOver = false
+  //  var isGameOver = false
     var playerActive = true // true = player 1, false = player 2
     
     // Create a RowGame object
@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gameTextLabel.text = "Welcome \(player1.playerID) & \(player2.playerID)!"
+        
         
         playerTurnInformationText()
         
@@ -119,13 +119,15 @@ class GameViewController: UIViewController {
             
             if gameBoard.isThereAWinner(player: playerInt) == true {
                 
-                isGameOver = true
+             //   isGameOver = true
                 gameBoard.gameOver()
                 setWinnerText(player: playerInt)
+                addWinnerScore(player: playerInt)
+                setPlayerTextLabel()
                 
             }else if gameBoard.isThereATie() == true {
                 
-                isGameOver = true
+              //  isGameOver = true
                 gameBoard.gameOver()
                 setTieText()
                 
@@ -193,10 +195,25 @@ class GameViewController: UIViewController {
         
     }
     
+    func addWinnerScore(player: Int) {
+        if player == 1 {
+            player1.addWinToScore()
+        }else if player == 2 {
+            player2.addWinToScore()
+        }else{
+            print("addWinnerScore ERROR")
+        }
+    }
+    
+    func setPlayerTextLabel() {
+        
+        gameTextLabel.text = "\(player1.playerName) score: \(player1.playerScore)\n \(player2.playerName) score: \(player2.playerScore)"
+    }
+    
     @IBAction func resetButton(_ sender: UIButton) {
         
         gameBoard.resetGame()
-        isGameOver = false
+      //  isGameOver = false
         playerActive = true
         playerTurnInformationText()
           
@@ -214,10 +231,10 @@ class GameViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
+  //  }
     
 
 }

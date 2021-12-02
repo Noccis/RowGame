@@ -6,6 +6,7 @@
 // FRÅGOR TILL DAVID
 // Ska jag ha player image i klassen eller ska det inte vara del av modell?
 // Ska player score sparas i mobilen så man ser den även om appen stängs av?
+// Spelar det någon roll hur jag visar score.
 //
 
 
@@ -24,17 +25,17 @@
 // Lägg ut knapparnas kod i en funktion imageTapped             (x)
 // Knyt att tap recong till en enda action                      (x)
 // Kalla på RowGame funktionerna i imageTapped istället för internt (x)
-// Byt ut playerImage mot name i classen Player.                ()
+// Byt ut playerImage mot name i classen Player.                (x)
 // Visa i label vem som vunnit eller om det är oavgjort         (x)
 // Sätt en reset button                                         (x)
 // Lägg alla images i en array så du kan resetta dom            (x)
-// Fixa en funktion som lägger om alla image från början        ()
+// Fixa en funktion som lägger om alla image från början        (x)
 // Fixa error ljud när man försöker lägga på tagen plats        ()
 // Skriv om setImage så den väljer player image?                ()
-// Kolla om du använder bool isGameOver i gamecontrollern       ()
+// Kolla om du använder bool isGameOver i gamecontrollern       (x)
 // ----------------------------------------------------------
 // VG
 // Fixa så man kan lägga in namn                                ()
 // Fixa så att det står vems tur det är                         (x)
-// Lägg till score till Player klassen                          ()
+// Lägg till score till Player klassen                          (x)
 // Fixa en dataSpelare                                          ()
