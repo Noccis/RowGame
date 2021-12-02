@@ -199,9 +199,13 @@ class GameViewController: UIViewController {
         isGameOver = false
         playerActive = true
         playerTurnInformationText()
-        
-        // Gå igenom array med imageViews och sätt tillbaka alla bilder till emptyFrame
-    
+          
+          for outlet in imageViewArray {
+          
+              guard let outlet = outlet else { return }
+              outlet.image = UIImage(named: "emptyframe")
+          
+          }
     
     }
     
