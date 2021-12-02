@@ -13,6 +13,7 @@ class Player  {
     let playerName: String
     var playerScore: Int
     let playerImage: String
+    
     init(playerID: Int, playerName: String = "Default", playerImage:String, playerScore: Int = 0) {
         
         self.playerID = playerID

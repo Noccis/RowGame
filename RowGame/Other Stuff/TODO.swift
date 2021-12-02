@@ -4,9 +4,9 @@
 //
 //  Created by Toni Löf on 2021-11-25.
 // FRÅGOR TILL DAVID
-// Ska jag ha player image i klassen eller ska det inte vara del av modell?
-// Ska player score sparas i mobilen så man ser den även om appen stängs av?
-// Spelar det någon roll hur jag visar score.
+// 
+//
+//
 //
 
 
@@ -30,9 +30,10 @@
 // Sätt en reset button                                         (x)
 // Lägg alla images i en array så du kan resetta dom            (x)
 // Fixa en funktion som lägger om alla image från början        (x)
-// Fixa error ljud när man försöker lägga på tagen plats        ()
-// Skriv om setImage så den väljer player image?                ()
+// Skriv om setImage så den väljer player image                 (x)
 // Kolla om du använder bool isGameOver i gamecontrollern       (x)
+// Fixa error ljud när man försöker lägga på tagen plats        ()
+
 // ----------------------------------------------------------
 // VG
 // Fixa så man kan lägga in namn                                ()

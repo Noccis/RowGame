@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setPlayerTextLabel()
         
         playerTurnInformationText()
         
@@ -113,7 +113,7 @@ class GameViewController: UIViewController {
         }
         if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
             
-            gameBoard.setPlayerIntInArray(arrayNr: arrayNr, playerNr: playerInt)
+            gameBoard.setPlayerMark(arrayNr: arrayNr, playerNr: playerInt)
             
             setPlayerImage(ImageViewTag: arrayNr, playerInt: playerInt)
             
@@ -147,11 +147,11 @@ class GameViewController: UIViewController {
        
         if playerInt == 1 {
            
-            imageOutlet.image = UIImage(named: "xgreen")
+            imageOutlet.image = UIImage(named: player1.playerImage)
             
         }else if playerInt == 2{
             
-            imageOutlet.image = UIImage(named: "cirkle")
+            imageOutlet.image = UIImage(named: player2.playerImage)
             
         }else {
             print("setPLayerImage ERROR")

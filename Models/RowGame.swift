@@ -10,7 +10,7 @@ import Foundation
 class RowGame {
     
   // private
-    var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+ private var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
  
     
     
@@ -26,8 +26,8 @@ class RowGame {
         }
     }
     
-    // Ska bara göra en sak
-    func setPlayerIntInArray(arrayNr: Int, playerNr: Int) {
+    // Döp om
+  func setPlayerMark(arrayNr: Int, playerNr: Int) {
         print("setPlayerMark running!")
     boardArray[arrayNr] = playerNr
      /*   if isThereAWinner(player: playerNr) == false {
@@ -109,14 +109,13 @@ class RowGame {
     
     func gameOver() {
        
-      var pos = -1
+       // boardArray = boardArray.map { _ in 10 }
         
-        for var number in boardArray {
-            pos += 1
-            number = 10
-            boardArray[pos] = number
-        
+        for (index) in boardArray.indices
+        {
+            boardArray[index] = 10
         }
+//
        
      print(boardArray)
         print("GAME OVER")
