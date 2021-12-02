@@ -89,6 +89,21 @@ class ViewController: UIViewController {
     
     
     @IBAction func startGame(_ sender: UIButton) {
+        let player1 = userInputText1.text
+        let player2: String
+        if userInputText2.text == "" {
+             player2 = "Beep"
+            print("Input 2 = empty string")
+        }else if userInputText2 == nil {
+            
+            player2 = "Beep"
+            print("input 2 = nil")
+            
+        }else{
+        
+            player2 = userInputText2.text
+             
+        }
     }
     
 }
