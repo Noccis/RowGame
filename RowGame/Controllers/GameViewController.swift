@@ -15,9 +15,22 @@ class GameViewController: UIViewController {
     // Create a RowGame object
     let gameBoard = RowGame()
     
+    //Take in player name from last VC
+    var p1Name: String?
+    var p2Name: String?
+    
+    /*
+     entryTextView.text = journalEntry?.content
+     */
     // Create 2 players
-    let player1 = Player(playerID: 1, playerImage: "xgreen")
-    let player2 = Player(playerID: 2, playerImage: "cirkle")
+    var player1 = Player(playerID: 1, playerImage: "xgreen")
+    var player2 = Player(playerID: 2, playerImage: "cirkle")
+    // Robot Player:
+    let r1 = RobotPlayer(playerID: 2, playerName: "Beep",playerImage: "cirkle")
+
+    
+
+    
 
     @IBOutlet weak var gameTextLabel: UILabel!
     
@@ -59,6 +72,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createPlayers()
         
         setPlayerTextLabel()
         
@@ -76,11 +90,31 @@ class GameViewController: UIViewController {
         
         
         
-        
-        
-        
-        
 
+    }
+    
+    func createPlayers() {
+        
+        guard let name1 = p1Name else { return }
+        
+        let name2 = p2Name
+        
+        if name2 == "" {
+            // Skapa robot
+            player1.playerName = name1
+            player2 = r1
+            print("Robot: I AM ALIVE!!!")
+          //  print(\(player2.playerName))
+            
+        }else{
+             // skapa 2 vanliga spelare
+            player1.playerName = name1
+            
+            guard let name2 = name2  else { return }
+            player2.playerName = name2
+            
+        }
+       
     }
     
     @IBAction func getUIImageViewTag(_ sender: UITapGestureRecognizer) {
@@ -134,6 +168,14 @@ class GameViewController: UIViewController {
             }else{
                 playerActive.toggle()
                 playerTurnInformationText()
+                
+                if playerActive == false {
+                    if player2.playerName == "Beep" {
+                        getFakeUIImageTag()
+                    }
+                }
+                
+            
             }
         }
         
@@ -163,11 +205,11 @@ class GameViewController: UIViewController {
         
         if playerActive == true {
             
-            informationTextLabel.text = "Player one, go!"
+            informationTextLabel.text = "\(player1.playerName), go!"
             
         }else if playerActive == false {
             
-            informationTextLabel.text = "Player two, go!"
+            informationTextLabel.text = "\(player2.playerName), go!"
             
         }else {
             informationTextLabel.text = "Error"
@@ -184,11 +226,11 @@ class GameViewController: UIViewController {
     func setWinnerText(player: Int) {
         
         if player == 1 {
-            informationTextLabel.text = "Player one won!"
+            informationTextLabel.text = "\(player1.playerName) won!"
             
         }else if player == 2 {
             
-            informationTextLabel.text = "Player two won!"
+            informationTextLabel.text = "\(player2.playerName) won!"
         }else{
             informationTextLabel.text = "SetWinnerText ERROR!"
         }
@@ -226,6 +268,18 @@ class GameViewController: UIViewController {
     
     }
     
+    func getFakeUIImageTag() {
+        
+        var arrayNr = r1.randomAvailableNr(array: gameBoard.boardArray)
+        
+//        guard let arrayNr = arrayNr else{
+//            print("func TAPIMAGE, the sender tag is NIL")
+//            return
+//        }
+        imageIsTapped(arrayNr: arrayNr)
+        print("func getFakeUIImageTag, sender tag: \(arrayNr)")
+
+    }
     
 
     // MARK: - Navigation

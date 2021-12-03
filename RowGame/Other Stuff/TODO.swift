@@ -4,7 +4,7 @@
 //
 //  Created by Toni Löf on 2021-11-25.
 // FRÅGOR TILL DAVID
-// 
+//
 //
 //
 //
@@ -33,6 +33,7 @@
 // Skriv om setImage så den väljer player image                 (x)
 // Kolla om du använder bool isGameOver i gamecontrollern       (x)
 // Fixa error ljud när man försöker lägga på tagen plats        ()
+// Byt till playerName på vems tur och vem vann.
 
 // ----------------------------------------------------------
 // VG
@@ -40,3 +41,10 @@
 // Fixa så att det står vems tur det är                         (x)
 // Lägg till score till Player klassen                          (x)
 // Fixa en dataSpelare                                          ()
+// Lägg till i ImageisTapped att om typ p2 = r1 så körs
+// funktionen RobotPlayer.placeMark eller något.                ()
+// KOLLA ATT FUNKTIONEN INTE KALLAS PÅ OM SPELET ÄR ÖVER!       ()
+
+// ----------------------------------------------------------
+// KRASHAR!
+// När player2 trycker efter att ha valt namn så försvinner brickan

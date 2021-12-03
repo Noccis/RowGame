@@ -69,7 +69,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Lets Play!"/>
                                 <connections>
-                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GfI-Nb-TXL"/>
+                                    <segue destination="dcq-BU-94C" kind="presentation" modalPresentationStyle="fullScreen" id="ifu-Ln-adD"/>
                                 </connections>
                             </button>
                         </subviews>

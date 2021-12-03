@@ -10,7 +10,7 @@ import Foundation
 class Player  {
     
     let playerID: Int
-    let playerName: String
+    var playerName: String
     var playerScore: Int
     let playerImage: String
     
@@ -22,6 +22,15 @@ class Player  {
         self.playerScore = playerScore
         
     }
+    
+//    init(playerID: Int, playerName: String, playerImage:String, playerScore: Int = 0) {
+//        
+//        self.playerID = playerID
+//        self.playerName = playerName
+//        self.playerImage = playerImage
+//        self.playerScore = playerScore
+//        
+//    }
     
     func addWinToScore(){
         playerScore += 1

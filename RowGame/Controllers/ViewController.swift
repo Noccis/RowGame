@@ -88,23 +88,42 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func startGame(_ sender: UIButton) {
-        let player1 = userInputText1.text
-        let player2: String
-        if userInputText2.text == "" {
-             player2 = "Beep"
-            print("Input 2 = empty string")
-        }else if userInputText2 == nil {
-            
-            player2 = "Beep"
-            print("input 2 = nil")
-            
-        }else{
+   // @IBAction func startGame(_ sender: UIButton) {  // Kanske bara skicka med 2 strings?
+//        let player1 = userInputText1.text
+//        let player2: String
+//        if userInputText2.text == "" {
+//             player2 = "Beep"
+//            print("Input 2 = empty string")
+//        }else if userInputText2 == nil {
+//
+//            player2 = "Beep"
+//            print("input 2 = nil")
+//
+//        }else{
+//
+//         //   player2 = userInputText2.text
+//
+//        }
+ //   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-            player2 = userInputText2.text
-             
-        }
-    }
+        // Lägg till if stats
+        guard let destinationVC = segue.destination as? GameViewController else {return}
+        
+        // Ska jag flytta detta till action startGame?
+        destinationVC.p1Name = userInputText1.text
+        destinationVC.p2Name = userInputText2.text
+        /*
+         guard let destinationVC = segue.destination as? JournalEntryViewController else { return }
+         guard let cell = sender as? UITableViewCell else { return }
+         guard let indexPath = tableView.indexPath(for: cell) else { return }
+         guard let entry = journal.entry(index: indexPath.row) else { return }
+                 
+         destinationVC.journalEntry = entry
+         */
+           
+       }
     
 }
 

@@ -18,6 +18,7 @@
 		0F3B4A6A274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A69274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift */; };
 		0F3B4A77274D247A00BE5493 /* RowGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A76274D247A00BE5493 /* RowGame.swift */; };
 		0F3B4A79274D275F00BE5493 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4A78274D275F00BE5493 /* Player.swift */; };
+		0F556A082759F5A8001F1340 /* RobotPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F556A072759F5A7001F1340 /* RobotPlayer.swift */; };
 		0F9B4193274FBC400049337F /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B4192274FBC400049337F /* TODO.swift */; };
 		0F9B4195274FC4960049337F /* KopieraKod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B4194274FC4960049337F /* KopieraKod.swift */; };
 		0F9B4199274FC5260049337F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B4198274FC5260049337F /* GameViewController.swift */; };
@@ -56,6 +57,7 @@
 		0F3B4A69274D13AE00BE5493 /* RowGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F3B4A76274D247A00BE5493 /* RowGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowGame.swift; sourceTree = "<group>"; };
 		0F3B4A78274D275F00BE5493 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0F556A072759F5A7001F1340 /* RobotPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPlayer.swift; sourceTree = "<group>"; };
 		0F9B4192274FBC400049337F /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		0F9B4194274FC4960049337F /* KopieraKod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KopieraKod.swift; sourceTree = "<group>"; };
 		0F9B4198274FC5260049337F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				0F3B4A48274D13A300BE5493 /* SceneDelegate.swift */,
 				0F9B4194274FC4960049337F /* KopieraKod.swift */,
 				0F9B4192274FBC400049337F /* TODO.swift */,
+				0F556A072759F5A7001F1340 /* RobotPlayer.swift */,
 			);
 			path = "Other Stuff";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F556A082759F5A8001F1340 /* RobotPlayer.swift in Sources */,
 				0F3B4A4B274D13A300BE5493 /* ViewController.swift in Sources */,
 				0F3B4A47274D13A300BE5493 /* AppDelegate.swift in Sources */,
 				0F3B4A77274D247A00BE5493 /* RowGame.swift in Sources */,
