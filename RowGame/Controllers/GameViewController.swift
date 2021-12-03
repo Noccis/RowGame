@@ -171,7 +171,11 @@ class GameViewController: UIViewController {
                 
                 if playerActive == false {
                     if player2.playerName == "Beep" {
-                        getFakeUIImageTag()
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
+                        self.getFakeUIImageTag()
+                        })
+                        
                     }
                 }
                 
