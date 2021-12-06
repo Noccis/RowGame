@@ -37,14 +37,14 @@
 
 // ----------------------------------------------------------
 // VG
-// Fixa så man kan lägga in namn                                ()
+// Fixa så man kan lägga in namn                                (x)
 // Fixa så att det står vems tur det är                         (x)
 // Lägg till score till Player klassen                          (x)
-// Fixa en dataSpelare                                          ()
+// Fixa en dataSpelare                                          (x)
 // Lägg till i ImageisTapped att om typ p2 = r1 så körs
-// funktionen RobotPlayer.placeMark eller något.                ()
-// KOLLA ATT FUNKTIONEN INTE KALLAS PÅ OM SPELET ÄR ÖVER!       ()
+// funktionen RobotPlayer.placeMark eller något.                (x)
+// KOLLA ATT FUNKTIONEN INTE KALLAS PÅ OM SPELET ÄR ÖVER!       (x)
 
 // ----------------------------------------------------------
 // KRASHAR!
-// När player2 trycker efter att ha valt namn så försvinner brickan
+// När player2 trycker efter att ha valt namn så försvinner brickan (x)
