@@ -4,12 +4,14 @@
 //
 //  Created by Toni Löf on 2021-11-25.
 //
-
+import AVFoundation
 import UIKit
 
 class GameViewController: UIViewController {
     
-  //  var isGameOver = false
+    var player: AVAudioPlayer?
+    
+
     var playerActive = true // true = player 1, false = player 2
     
     // Create a RowGame object
@@ -19,10 +21,7 @@ class GameViewController: UIViewController {
     var p1Name: String?
     var p2Name: String?
     
-    /*
-     entryTextView.text = journalEntry?.content
-     */
-    // Create 2 players
+   
     var player1 = Player(playerID: 1, playerImage: "xgreen")
     var player2 = Player(playerID: 2, playerImage: "cirkle")
     // Robot Player:
@@ -60,15 +59,7 @@ class GameViewController: UIViewController {
     var imageViewArray: [UIImageView?] = []
     
 
-    
-    
-   
-    
-   
-    
-    // ----------------------------------------------------------------
-    // ----------------------------------------------------------------
-    // ----------------------------------------------------------------
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,14 +91,15 @@ class GameViewController: UIViewController {
         let name2 = p2Name
         
         if name2 == "" {
-            // Skapa robot
+            // Create Robot Player
             player1.playerName = name1
             player2 = r1
             print("Robot: I AM ALIVE!!!")
-          //  print(\(player2.playerName))
+       
             
         }else{
-             // skapa 2 vanliga spelare
+            
+             // Create 2 "regular" players
             player1.playerName = name1
             
             guard let name2 = name2  else { return }
@@ -136,6 +128,7 @@ class GameViewController: UIViewController {
     func imageIsTapped(arrayNr: Int) {
       
         let playerInt: Int?
+        
         // Desides if player one or two is active.
         if playerActive == true {
             playerInt = 1
@@ -153,7 +146,6 @@ class GameViewController: UIViewController {
             
             if gameBoard.isThereAWinner(player: playerInt) == true {
                 
-             //   isGameOver = true
                 gameBoard.gameOver()
                 setWinnerText(player: playerInt)
                 addWinnerScore(player: playerInt)
@@ -161,7 +153,6 @@ class GameViewController: UIViewController {
                 
             }else if gameBoard.isThereATie() == true {
                 
-              //  isGameOver = true
                 gameBoard.gameOver()
                 setTieText()
                 
@@ -175,13 +166,15 @@ class GameViewController: UIViewController {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
                         self.getFakeUIImageTag()
                         })
-                        
+            
                     }
                 }
-                
-            
             }
+        }else {
+           
+            playErrorSound()
         }
+        
         
     }
     
@@ -259,7 +252,7 @@ class GameViewController: UIViewController {
     @IBAction func resetButton(_ sender: UIButton) {
         
         gameBoard.resetGame()
-      //  isGameOver = false
+      
         playerActive = true
         playerTurnInformationText()
           
@@ -274,25 +267,39 @@ class GameViewController: UIViewController {
     
     func getFakeUIImageTag() {
         
-        var arrayNr = r1.randomAvailableNr(array: gameBoard.boardArray)
+        let arrayNr = r1.randomAvailableNr(array: gameBoard.boardArray)
         
-//        guard let arrayNr = arrayNr else{
-//            print("func TAPIMAGE, the sender tag is NIL")
-//            return
-//        }
         imageIsTapped(arrayNr: arrayNr)
+        
         print("func getFakeUIImageTag, sender tag: \(arrayNr)")
 
     }
     
+    func playErrorSound() {
+        
+        guard player == player else { return }
+       
+        let urlString = Bundle.main.path(forResource: "invalid", ofType: "mp3")
+        do {
+          try AVAudioSession.sharedInstance().setMode(.default)
+            
+          try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else { return }
 
-    // MARK: - Navigation
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            
+            guard let player = player else { return }
+            
+            player.play()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
- //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-  //  }
+        }
+        catch {
+            print("playback ERROR")
+        }
+        
+        
+    }
     
 
 }

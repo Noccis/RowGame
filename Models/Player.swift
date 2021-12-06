@@ -23,14 +23,6 @@ class Player  {
         
     }
     
-//    init(playerID: Int, playerName: String, playerImage:String, playerScore: Int = 0) {
-//        
-//        self.playerID = playerID
-//        self.playerName = playerName
-//        self.playerImage = playerImage
-//        self.playerScore = playerScore
-//        
-//    }
     
     func addWinToScore(){
         playerScore += 1

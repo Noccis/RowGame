@@ -5,7 +5,7 @@
 //  Created by Toni Löf on 2021-11-25.
 // FRÅGOR TILL DAVID
 //
-//
+// Varför tar det sån tid första gången error ljudet spelas upp?
 //
 //
 
@@ -32,7 +32,7 @@
 // Fixa en funktion som lägger om alla image från början        (x)
 // Skriv om setImage så den väljer player image                 (x)
 // Kolla om du använder bool isGameOver i gamecontrollern       (x)
-// Fixa error ljud när man försöker lägga på tagen plats        ()
+// Fixa error ljud när man försöker lägga på tagen plats        (x)
 // Byt till playerName på vems tur och vem vann.
 
 // ----------------------------------------------------------

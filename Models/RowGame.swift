@@ -26,25 +26,14 @@ class RowGame {
         }
     }
     
-    // Döp om
+    
   func setPlayerMark(arrayNr: Int, playerNr: Int) {
         print("setPlayerMark running!")
     boardArray[arrayNr] = playerNr
-     /*   if isThereAWinner(player: playerNr) == false {
-            
-            if isGameOver() == true {
-                
-                print("setPlayerMark, isGameOver == true")
-                
-            }
-            
-        }
-      */
-        
-        
+    
     }
  
-    // döp om till Tie
+    
     func isThereATie()-> Bool {
         print("isGameOver running!")
         for spot in boardArray{
@@ -52,9 +41,7 @@ class RowGame {
                 return false
             }
         }
-     //   gameOver()
         return true
-        
     }
     
     
@@ -63,42 +50,42 @@ class RowGame {
       
         if boardArray[0] == player && boardArray[1] == player && boardArray[2] == player {
             print("Player \(player) Won!")
-           // gameOver()
+          
             return true
             
         }else if boardArray[3] == player && boardArray[4] == player && boardArray[5] == player {
             print("Player \(player) Won!")
-           // gameOver()
+           
             return true
             
         }else if boardArray[6] == player && boardArray[7] == player && boardArray[8] == player {
-           // print("Player \(player) Won!")
-            gameOver()
+         
+         
             return true
             
         }else if boardArray[0] == player && boardArray[3] == player && boardArray[6] == player {
             print("Player \(player) Won!")
-           // gameOver()
+          
             return true
             
         }else if boardArray[1] == player && boardArray[4] == player && boardArray[7] == player {
             print("Player \(player) Won!")
-          //  gameOver()
+         
             return true
             
         }else if boardArray[2] == player && boardArray[5] == player && boardArray[8] == player {
             print("Player \(player) Won!")
-          //  gameOver()
+         
             return true
             
         }else if boardArray[0] == player && boardArray[4] == player && boardArray[8] == player {
             print("Player \(player) Won!")
-          //  gameOver()
+          
             return true
             
         }else if boardArray[6] == player && boardArray[4] == player && boardArray[2] == player {
             print("Player \(player) Won!")
-          //  gameOver()
+          
             return true
             
         }else{
@@ -109,13 +96,10 @@ class RowGame {
     
     func gameOver() {
        
-       // boardArray = boardArray.map { _ in 10 }
-        
         for (index) in boardArray.indices
         {
             boardArray[index] = 10
         }
-//
        
      print(boardArray)
         print("GAME OVER")
@@ -124,19 +108,13 @@ class RowGame {
     
     func resetGame(){
         
-        var pos = -1
-          
-          for var number in boardArray {
-              pos += 1
-              number = 0
-              boardArray[pos] = number
-          
-          }
+        for (index) in boardArray.indices
+        {
+            boardArray[index] = 0
+        }
         
         print("resetGame running. BoardArray:")
         print(boardArray)
-       
-        
         
     }
     
