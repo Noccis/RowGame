@@ -42,31 +42,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    func showOrHideLabels() {
-//
-//        if isLabelsVisible == true {
-//
-//            enterNameLabel1.isHidden = true
-//            enterNameLabel2.isHidden = true
-//            userInputText1.isHidden = true
-//            userInputText2.isHidden = true
-//
-//            isLabelsVisible = false
-//        }else if isLabelsVisible == false {
-            
-//            enterNameLabel1.isHidden = false
-//            enterNameLabel2.isHidden = false
-//            userInputText1.isHidden = false
-//            userInputText2.isHidden = false
-//
-//            isLabelsVisible = true
-//
-//        }else{
-//            print("showOrHideLabels ERROR")
-//        }
-//
-//    }
-    
 
     @IBAction func playWithFriend(_ sender: UIButton) {
         
