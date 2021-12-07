@@ -140,6 +140,7 @@ class GameViewController: UIViewController {
         guard let playerInt = playerInt else {
             return
         }
+        
         if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
             
             gameBoard.setPlayerMark(arrayNr: arrayNr, playerNr: playerInt)
@@ -148,10 +149,8 @@ class GameViewController: UIViewController {
             
             if gameBoard.isThereAWinner(player: playerInt) == true {
                 
-                gameBoard.gameOver()
-                setWinnerText(player: playerInt)
-                addWinnerScore(player: playerInt)
-                setPlayerTextLabel()
+                thereIsAWinner(playerInt: playerInt)
+                
                 
             }else if gameBoard.isThereATie() == true {
                 
@@ -177,6 +176,15 @@ class GameViewController: UIViewController {
             playErrorSound()
         }
         
+        
+    }
+    
+    func thereIsAWinner(playerInt: Int) {
+        
+        gameBoard.gameOver()
+        setWinnerText(player: playerInt)
+        addWinnerScore(player: playerInt)
+        setPlayerTextLabel()
         
     }
     
@@ -269,7 +277,7 @@ class GameViewController: UIViewController {
     
     func getFakeUIImageTag() {
         
-        let arrayNr = r1.randomAvailableNr(array: gameBoard.boardArray)
+        let arrayNr = r1.randomAvailableNr(game: gameBoard)
         
         imageIsTapped(arrayNr: arrayNr)
         

@@ -10,7 +10,7 @@ import Foundation
 class RowGame {
     
   // private
- var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+ private var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
  
     
     

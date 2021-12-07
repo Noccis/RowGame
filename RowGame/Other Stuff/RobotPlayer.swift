@@ -9,17 +9,16 @@ class RobotPlayer: Player {
     
     
     
-    func randomAvailableNr(array: [Int]) -> Int {
+    func randomAvailableNr(game: RowGame) -> Int {
         
         var nr = Int.random(in: 0...8)
         
-        while array[nr] != 0 {
+        while game.isSpotOpen(arrayNr: nr, playerActive: 2) != true {
             
             nr = Int.random(in: 0...8)
         }
-        
-         return nr
-      
+                 return nr
     }
+    
 
 }
