@@ -26,7 +26,7 @@
                                 <rect key="frame" x="100" y="170.5" width="65" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Friend">
-                                    <color key="baseBackgroundColor" red="0.69357305127443492" green="0.51827870494807216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.097470201549999996" green="0.46148848529999997" blue="0.82643854620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playWithFriend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuB-5c-xyW"/>
@@ -36,7 +36,7 @@
                                 <rect key="frame" x="251" y="170.5" width="63" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Robot">
-                                    <color key="baseBackgroundColor" red="0.69426798820000002" green="0.51746678349999997" blue="0.99135833979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.097470201549999996" green="0.46148848529999997" blue="0.82643854620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playWithRobot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YhA-h7-Vkx"/>
@@ -67,7 +67,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3q-LM-UBh">
                                 <rect key="frame" x="163.5" y="470.5" width="87" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Lets Play!"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Lets Play!">
+                                    <color key="baseBackgroundColor" red="0.16816347840000001" green="0.381334126" blue="0.98504883050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="dcq-BU-94C" kind="presentation" modalPresentationStyle="fullScreen" id="ifu-Ln-adD"/>
                                 </connections>
@@ -115,63 +117,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="AsZ-sR-71b">
+                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="AsZ-sR-71b">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="HkY-2G-rg1" appends="YES" id="6aH-um-dDM"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-Vt-wOE">
+                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-Vt-wOE">
                                 <rect key="frame" x="33" y="398" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="jTv-E9-sE5" appends="YES" id="Qff-uK-gyB"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-RT-V4D">
+                            <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-RT-V4D">
                                 <rect key="frame" x="281" y="398" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="vdn-Kh-61h" appends="YES" id="0qT-6o-1gq"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-pK-qzp">
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-pK-qzp">
                                 <rect key="frame" x="157" y="258" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="wli-57-tdC" appends="YES" id="OHt-tz-gwI"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-TE-n4U">
+                            <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-TE-n4U">
                                 <rect key="frame" x="157" y="538" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="slR-aR-Pi0" appends="YES" id="ZLO-4T-o2D"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="Isc-fr-HbN">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="Isc-fr-HbN">
                                 <rect key="frame" x="33" y="258" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VQI-a5-x6w" appends="YES" id="RYj-OC-VZ0"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-oG-mH9">
+                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-oG-mH9">
                                 <rect key="frame" x="281" y="258" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="uX7-Tc-Ctx" appends="YES" id="eyx-HQ-wsH"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="UGL-A6-tXt">
+                            <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="UGL-A6-tXt">
                                 <rect key="frame" x="281" y="538" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="9fl-qX-sS1" appends="YES" id="zBJ-yN-lwQ"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe" translatesAutoresizingMaskIntoConstraints="NO" id="QZE-mH-LRp">
+                            <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyframe2" translatesAutoresizingMaskIntoConstraints="NO" id="QZE-mH-LRp">
                                 <rect key="frame" x="33" y="538" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -187,7 +189,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgs-na-dZy">
                                 <rect key="frame" x="127" y="727" width="157" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reset Game"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset Game">
+                                    <color key="baseBackgroundColor" red="0.16816347840000001" green="0.381334126" blue="0.98504883050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="resetButton:" destination="dcq-BU-94C" eventType="touchUpInside" id="tXx-lj-Mti"/>
                                 </connections>
@@ -295,7 +299,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="emptyframe" width="100" height="100"/>
+        <image name="emptyframe2" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

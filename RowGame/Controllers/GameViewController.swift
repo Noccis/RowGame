@@ -22,10 +22,10 @@ class GameViewController: UIViewController {
     var p2Name: String?
     
    
-    var player1 = Player(playerID: 1, playerImage: "xgreen")
-    var player2 = Player(playerID: 2, playerImage: "cirkle")
+    var player1 = Player(playerID: 1, playerImage: "xgreen2")
+    var player2 = Player(playerID: 2, playerImage: "circle2")
     // Robot Player:
-    let r1 = RobotPlayer(playerID: 2, playerName: "Beep",playerImage: "cirkle")
+    let r1 = RobotPlayer(playerID: 2, playerName: "Beep",playerImage: "circle2")
 
     
 
@@ -259,7 +259,7 @@ class GameViewController: UIViewController {
           for outlet in imageViewArray {
           
               guard let outlet = outlet else { return }
-              outlet.image = UIImage(named: "emptyframe")
+              outlet.image = UIImage(named: "emptyframe2")
           
           }
     
