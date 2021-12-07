@@ -79,6 +79,8 @@ class GameViewController: UIViewController {
         imageViewArray.append(imageSeven)
         imageViewArray.append(imageEight)
         
+        startAndStopPlayer()
+        
         
         
 
@@ -277,6 +279,32 @@ class GameViewController: UIViewController {
     
     func playErrorSound() {
         
+//        guard player == player else { return }
+//
+//        let urlString = Bundle.main.path(forResource: "invalid", ofType: "mp3")
+//        do {
+//          try AVAudioSession.sharedInstance().setMode(.default)
+//
+//          try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+//
+//            guard let urlString = urlString else { return }
+//
+//            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            
+            guard let player = player else { return }
+            
+            player.play()
+
+//        }
+//        catch {
+//            print("playback ERROR")
+//        }
+        
+        
+    }
+    
+    func startAndStopPlayer() {
+        
         guard player == player else { return }
        
         let urlString = Bundle.main.path(forResource: "invalid", ofType: "mp3")
@@ -292,6 +320,7 @@ class GameViewController: UIViewController {
             guard let player = player else { return }
             
             player.play()
+            player.stop()
 
         }
         catch {
