@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
 
     var playerActive = true // true = player 1, false = player 2
     
+    var locked = false // Bool to prevent player 1 from clicking views if Robot player is active
+    
     // Create a RowGame object
     let gameBoard = RowGame()
     
@@ -113,6 +115,9 @@ class GameViewController: UIViewController {
     
     @IBAction func getUIImageViewTag(_ sender: UITapGestureRecognizer) {
         
+        
+        // **************** If Bool locked is false, player 1 can click image view.
+        if !locked {
         let arrayNr = sender.view?.tag
         
         guard let arrayNr = arrayNr else{
@@ -120,7 +125,13 @@ class GameViewController: UIViewController {
             return
         }
         imageIsTapped(arrayNr: arrayNr)
+            
+            // **************** Checks if player 2 is a robot and locks Bool locked.
+            if player2 is RobotPlayer {
+                locked = true
+            }
         print("func getUIImageTag, sender tag: \(arrayNr)")
+        }
     }
     
     
@@ -131,7 +142,7 @@ class GameViewController: UIViewController {
       
         let playerInt: Int?
         
-        // Desides if player one or two is active.
+        // ******** Desides if player one or two is active.
         if playerActive == true {
             playerInt = 1
         }else {
@@ -140,32 +151,35 @@ class GameViewController: UIViewController {
         guard let playerInt = playerInt else {
             return
         }
-        
-        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) == true {
+        // **************** Checks if the chosen spot is open (0)
+        if gameBoard.isSpotOpen(arrayNr: arrayNr, playerActive: playerInt) {
             
             gameBoard.setPlayerMark(arrayNr: arrayNr, playerNr: playerInt)
             
             setPlayerImage(ImageViewTag: arrayNr, playerInt: playerInt)
             
-            if gameBoard.isThereAWinner(player: playerInt) == true {
+        // **************** Checks if there is a winner after placing mark.
+            if gameBoard.isThereAWinner(player: playerInt) {
                 
                 thereIsAWinner(playerInt: playerInt)
-                
-                
-            }else if gameBoard.isThereATie() == true {
+        // **************** Checks if game is over if there is no winner.
+            }else if gameBoard.isThereATie() {
                 
                 gameBoard.gameOver()
                 setTieText()
                 
+        // **************** If there is no winner and game is not over, toggles player and information text.
             }else{
                 playerActive.toggle()
                 playerTurnInformationText()
                 
-                if playerActive == false {
-                    if player2.playerName == "Beep" {
+                if !playerActive {
+                    if player2 is RobotPlayer {
+                  //  if player2.playerName == "Beep" {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
-                        self.getFakeUIImageTag()
+                            self.getFakeUIImageTag()
+                            locked = false
                         })
             
                     }
@@ -263,6 +277,7 @@ class GameViewController: UIViewController {
         
         gameBoard.resetGame()
       
+        locked = false
         playerActive = true
         playerTurnInformationText()
           
