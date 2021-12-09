@@ -71,7 +71,7 @@
                                     <color key="baseBackgroundColor" red="0.16816347840000001" green="0.381334126" blue="0.98504883050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dcq-BU-94C" kind="presentation" identifier="gameSegue" modalPresentationStyle="fullScreen" id="ifu-Ln-adD"/>
+                                    <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0b-tu-1fD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,6 +103,7 @@
                         <outlet property="userInputText1" destination="SMW-H2-5yT" id="zlE-Px-AGz"/>
                         <outlet property="userInputText2" destination="BC7-SI-Qr1" id="i4K-nt-sbq"/>
                         <outlet property="welcomeLabel" destination="t9r-UQ-Om8" id="KKk-5C-DgC"/>
+                        <segue destination="dcq-BU-94C" kind="presentation" identifier="gameSegue" modalPresentationStyle="fullScreen" id="jXW-Ko-WHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
