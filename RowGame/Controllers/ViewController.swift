@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-   // var isLabelsVisible = true
+  
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
@@ -38,8 +38,6 @@ class ViewController: UIViewController {
         welcomeLabel.text = "Welcome to Row Game! \n Who do you want to play against?"
        
         
-        
-        // Do any additional setup after loading the view.
     }
     
 
@@ -51,6 +49,8 @@ class ViewController: UIViewController {
         userInputText2.isHidden = false
         startGameButton.isHidden = false
         
+        userInputText1.becomeFirstResponder()
+        
     }
     
     
@@ -60,43 +60,23 @@ class ViewController: UIViewController {
         userInputText1.isHidden = false
         startGameButton.isHidden = false
         
+        userInputText1.becomeFirstResponder()
+        
     }
     
     
-   // @IBAction func startGame(_ sender: UIButton) {  // Kanske bara skicka med 2 strings?
-//        let player1 = userInputText1.text
-//        let player2: String
-//        if userInputText2.text == "" {
-//             player2 = "Beep"
-//            print("Input 2 = empty string")
-//        }else if userInputText2 == nil {
-//
-//            player2 = "Beep"
-//            print("input 2 = nil")
-//
-//        }else{
-//
-//         //   player2 = userInputText2.text
-//
-//        }
- //   }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // Lägg till if stats
-        guard let destinationVC = segue.destination as? GameViewController else {return}
-        
-        // Ska jag flytta detta till action startGame?
-        destinationVC.p1Name = userInputText1.text
-        destinationVC.p2Name = userInputText2.text
-        /*
-         guard let destinationVC = segue.destination as? JournalEntryViewController else { return }
-         guard let cell = sender as? UITableViewCell else { return }
-         guard let indexPath = tableView.indexPath(for: cell) else { return }
-         guard let entry = journal.entry(index: indexPath.row) else { return }
-                 
-         destinationVC.journalEntry = entry
-         */
+        if segue.identifier == "gameSegue" {
+            
+            guard let destinationVC = segue.destination as? GameViewController else {return}
+            destinationVC.p1Name = userInputText1.text
+            destinationVC.p2Name = userInputText2.text
+            
+            
+        }
            
        }
     

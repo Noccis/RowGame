@@ -71,7 +71,7 @@
                                     <color key="baseBackgroundColor" red="0.16816347840000001" green="0.381334126" blue="0.98504883050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dcq-BU-94C" kind="presentation" modalPresentationStyle="fullScreen" id="ifu-Ln-adD"/>
+                                    <segue destination="dcq-BU-94C" kind="presentation" identifier="gameSegue" modalPresentationStyle="fullScreen" id="ifu-Ln-adD"/>
                                 </connections>
                             </button>
                         </subviews>

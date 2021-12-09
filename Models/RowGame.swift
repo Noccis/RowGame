@@ -9,16 +9,16 @@ import Foundation
 
 class RowGame {
     
-  // private
+ 
  private var boardArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
  
     
     
     func isSpotOpen(arrayNr: Int, playerActive: Int) -> Bool {
-    //    print(boardArray)
+    
         if boardArray[arrayNr] == 0 {
             print("isSpotOpen spot is OPEN")
-            //setPlayerIntInArray(arrayNr: arrayNr, playerNr: playerActive)
+            
             return true
         }else{
             print("Invalid move!")

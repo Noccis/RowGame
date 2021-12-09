@@ -81,7 +81,7 @@ class GameViewController: UIViewController {
         imageViewArray.append(imageSeven)
         imageViewArray.append(imageEight)
         
-        startAndStopPlayer()
+        startAndStopErrorPlayer()
         
         
         
@@ -95,7 +95,7 @@ class GameViewController: UIViewController {
         let name2 = p2Name
         
         if name2 == "" {
-            // Create Robot Player
+            //  Creates Robot Player
             player1.playerName = name1
             player2 = r1
             print("Robot: I AM ALIVE!!!")
@@ -103,7 +103,7 @@ class GameViewController: UIViewController {
             
         }else{
             
-             // Create 2 "regular" players
+             // Creates 2 "regular" players
             player1.playerName = name1
             
             guard let name2 = name2  else { return }
@@ -127,9 +127,7 @@ class GameViewController: UIViewController {
         imageIsTapped(arrayNr: arrayNr)
             
             // **************** Checks if player 2 is a robot and locks Bool locked.
-            if player2 is RobotPlayer {
-                locked = true
-            }
+           
         print("func getUIImageTag, sender tag: \(arrayNr)")
         }
     }
@@ -176,7 +174,7 @@ class GameViewController: UIViewController {
                 if !playerActive {
                     if player2 is RobotPlayer {
                   //  if player2.playerName == "Beep" {
-                        
+                        locked = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
                             self.getFakeUIImageTag()
                             locked = false
@@ -290,6 +288,8 @@ class GameViewController: UIViewController {
     
     }
     
+    
+    // **************** Gets fake UIImageView tag for Robot Player.
     func getFakeUIImageTag() {
         
         let arrayNr = r1.randomAvailableNr(game: gameBoard)
@@ -307,7 +307,7 @@ class GameViewController: UIViewController {
             player.play()
     }
     
-    func startAndStopPlayer() {
+    func startAndStopErrorPlayer() {
         
         guard player == player else { return }
        
